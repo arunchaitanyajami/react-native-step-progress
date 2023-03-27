@@ -34,17 +34,15 @@ class ProgressSteps extends Component {
 
       step.push(
           <View key={i} style={{alignContent: 'center', justifyContent: 'center', alignItems: 'center'}}>
-            <View style={{ width: '100%'}}>
-              <StepIcon
-                  {...this.getChildProps()}
-                  stepNum={i + 1}
-                  label={this.props.children[i].props.label}
-                  isFirstStep={i === 0}
-                  isLastStep={i === this.state.stepCount - 1}
-                  isCompletedStep={isCompletedStep}
-                  isActiveStep={isActiveStep}
-              />
-            </View>
+            <StepIcon
+                {...this.getChildProps()}
+                stepNum={i + 1}
+                label={this.props.children[i].props.label}
+                isFirstStep={i === 0}
+                isLastStep={i === this.state.stepCount - 1}
+                isCompletedStep={isCompletedStep}
+                isActiveStep={isActiveStep}
+            />
           </View>
       );
     });
@@ -68,8 +66,7 @@ class ProgressSteps extends Component {
     const styles = {
       stepIcons: {
         position: 'relative',
-        justifyContent: 'space-evenly',
-        alignSelf: 'center',
+        justifyContent: 'space-around',
         flexDirection: 'row',
         top: this.props.topOffset,
         marginBottom: this.props.marginBottom,
