@@ -94,6 +94,9 @@ class ProgressStep extends Component {
         <ProgressButtons
             renderNextButton={this.renderNextButton}
             renderPreviousButton={this.renderPreviousButton}
+            btnContainer={this.props.btnContainer || {}}
+            previousBtnContainer={this.props.previousBtnContainer || {}}
+            nextBtnContainer={this.props.nextBtnContainer || {}}
         />
     );
 

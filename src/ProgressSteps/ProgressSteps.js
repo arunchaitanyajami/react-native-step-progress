@@ -33,19 +33,19 @@ class ProgressSteps extends Component {
       const isActiveStep = this.props.isComplete ? false : i === this.state.activeStep;
 
       step.push(
-        <View key={i}>
-          <View>
-            <StepIcon
-              {...this.getChildProps()}
-              stepNum={i + 1}
-              label={this.props.children[i].props.label}
-              isFirstStep={i === 0}
-              isLastStep={i === this.state.stepCount - 1}
-              isCompletedStep={isCompletedStep}
-              isActiveStep={isActiveStep}
-            />
+          <View key={i} style={{alignContent: 'center', justifyContent: 'center', alignItems: 'center'}}>
+            <View style={{ width: '100%'}}>
+              <StepIcon
+                  {...this.getChildProps()}
+                  stepNum={i + 1}
+                  label={this.props.children[i].props.label}
+                  isFirstStep={i === 0}
+                  isLastStep={i === this.state.stepCount - 1}
+                  isCompletedStep={isCompletedStep}
+                  isActiveStep={isActiveStep}
+              />
+            </View>
           </View>
-        </View>
       );
     });
 
@@ -77,16 +77,16 @@ class ProgressSteps extends Component {
     };
 
     return (
-      <View style={{ flex: 1 }}>
-        <View style={styles.stepIcons}>{this.renderStepIcons()}</View>
         <View style={{ flex: 1 }}>
-          {React.cloneElement(this.props.children[this.state.activeStep], {
-            setActiveStep: this.setActiveStep,
-            activeStep: this.state.activeStep,
-            stepCount: this.state.stepCount,
-          })}
+          <View style={styles.stepIcons}>{this.renderStepIcons()}</View>
+          <View style={{ flex: 1 }}>
+            {React.cloneElement(this.props.children[this.state.activeStep], {
+              setActiveStep: this.setActiveStep,
+              activeStep: this.state.activeStep,
+              stepCount: this.state.stepCount,
+            })}
+          </View>
         </View>
-      </View>
     );
   }
 }
