@@ -155,26 +155,29 @@ render() {
 | marginBottom              | Set progress bar bottom margin           | 50          | Number  |
 
 ### Progress Step Component
-| Name | Description | Default | Type |
-|------------------|--------------------------------------------------------------------------|----------|---------|
-| label | Title of the current step to be displayed | null | String |
-| onNext | Function called when the next step button is pressed | null | Func |
-| onPrevious | Function called when the previous step button is pressed | null | Func |
-| onSubmit | Function called when the submit step button is pressed | null | Func |
-| nextBtnText | Text to display inside the next button | Next | String |
-| previousBtnText | Text to display inside the previous button | Previous | String |
-| finishBtnText | Text to display inside the button on the last step | Submit | String |
-| nextBtnStyle | Style object to provide to the next/finish buttons | { textAlign: 'center', padding: 8 } | Object |
-| nextBtnTextStyle | Style object to provide to the next/finish button text | { color: '#007aff', fontSize: 18 } | Object |
-| nextBtnDisabled | Value to disable/enable next button | false | Boolean |
-| previousBtnStyle | Style object to provide to the previous button | { textAlign: 'center', padding: 8 } | Object |
-| previousBtnTextStyle | Style object to provide to the previous button text | { color: '#007aff', fontSize: 18 } | Object |
-| previousBtnDisabled | Value to disable/enable previous button | false | Boolean |
-| scrollViewProps | Object to provide props to ScrollView component | {} | Object |
-| scrollable | The content of the Progress Step should be scrollable | true | Boolean |
-| viewProps | Object to provide props to view component if scrollable is false | {} | Object |
+| Name | Description                                                                           | Default | Type    |
+|------------------|---------------------------------------------------------------------------------------|----------|---------|
+| label | Title of the current step to be displayed                                             | null | String  |
+| onNext | Function called when the next step button is pressed                                  | null | Func    |
+| onPrevious | Function called when the previous step button is pressed                              | null | Func    |
+| onSubmit | Function called when the submit step button is pressed                                | null | Func    |
+| nextBtnText | Text to display inside the next button                                                | Next | String  |
+| previousBtnText | Text to display inside the previous button                                            | Previous | String  |
+| finishBtnText | Text to display inside the button on the last step                                    | Submit | String  |
+| nextBtnStyle | Style object to provide to the next/finish buttons                                    | { textAlign: 'center', padding: 8 } | Object  |
+| nextBtnTextStyle | Style object to provide to the next/finish button text                                | { color: '#007aff', fontSize: 18 } | Object  |
+| nextBtnDisabled | Value to disable/enable next button                                                   | false | Boolean |
+| previousBtnStyle | Style object to provide to the previous button                                        | { textAlign: 'center', padding: 8 } | Object  |
+| previousBtnTextStyle | Style object to provide to the previous button text                                   | { color: '#007aff', fontSize: 18 } | Object  |
+| previousBtnDisabled | Value to disable/enable previous button                                               | false | Boolean |
+| scrollViewProps | Object to provide props to ScrollView component                                       | {} | Object  |
+| scrollable | The content of the Progress Step should be scrollable                                 | true | Boolean |
+| viewProps | Object to provide props to view component if scrollable is false                      | {} | Object  |
 | errors | Used to assist with current step validation. If true, the next step won't be rendered | false | Boolean |
-| removeBtnRow | Used to render the progress step without the button row | false | Boolean |
+| removeBtnRow | Used to render the progress step without the button row                               | false | Boolean |
+| btnContainer | Used to add styles around buttons                                                     | false | Object  |
+| previousBtnContainer | Used to add styles around previous button                                             | false | Object  |
+| nextBtnContainer | Used to add styles around next button                                                 | false | Object  |
 
 ## Contributing
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
