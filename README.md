@@ -182,7 +182,7 @@ Pull requests are always welcome! Feel free to open a new GitHub issue for any c
 **Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
 
 ## Author
-Colby Miller | [https://colbymillerdev.com](https://colbymillerdev.com)
+Arun Chaitanya Jami | [https://iamarunchaitanyajami.com/](https://iamarunchaitanyajami.com/)
 
 ## License
 [MIT](./LICENSE)
