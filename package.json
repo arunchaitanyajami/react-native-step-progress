@@ -1,6 +1,6 @@
 {
   "name": "react-native-step-progess",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple and fully customizable React Native component that implements a progress stepper UI.",
   "main": "index.js",
   "scripts": {
@@ -36,5 +36,8 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1"
+  },
+  "directories": {
+    "example": "examples"
   }
 }
