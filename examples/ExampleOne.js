@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-import { ProgressSteps, ProgressStep } from 'react-native-progress-steps';
+import { ProgressSteps, ProgressStep } from 'react-native-step-progress';
 
 class ExampleOne extends Component {
   static navigationOptions = {

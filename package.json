@@ -31,10 +31,10 @@
   },
   "homepage": "https://github.com/arunchaitanyajami/react-native-step-progess#readme",
   "devDependencies": {
-    "metro-react-native-babel-preset": "^0.51.1"
+    "metro-react-native-babel-preset": "^0.76.0"
   },
   "dependencies": {
-    "lodash": "^4.17.11",
-    "prop-types": "^15.6.2"
+    "lodash": "^4.17.21",
+    "prop-types": "^15.8.1"
   }
 }

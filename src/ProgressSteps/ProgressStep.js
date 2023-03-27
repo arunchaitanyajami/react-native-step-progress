@@ -46,17 +46,17 @@ class ProgressStep extends Component {
     let textStyle = [btnTextStyle];
     if (this.props.nextBtnDisabled) textStyle.push(disabledBtnText);
 
-    return (
-      <TouchableOpacity
+    const nextBtnText = this.props.activeStep === this.props.stepCount - 1 ? this.props.finishBtnText : this.props.nextBtnText;
+
+    return nextBtnText && <TouchableOpacity
         style={btnStyle}
         onPress={this.props.activeStep === this.props.stepCount - 1 ? this.onSubmit : this.onNextStep}
         disabled={this.props.nextBtnDisabled}
-      >
-        <Text style={textStyle}>
-          {this.props.activeStep === this.props.stepCount - 1 ? this.props.finishBtnText : this.props.nextBtnText}
-        </Text>
-      </TouchableOpacity>
-    );
+    >
+      <Text style={textStyle}>
+        {nextBtnText}
+      </Text>
+    </TouchableOpacity>;
   };
 
   renderPreviousButton = () => {
@@ -79,11 +79,11 @@ class ProgressStep extends Component {
     let textStyle = [btnTextStyle];
     if (this.props.previousBtnDisabled) textStyle.push(disabledBtnText);
 
-    return (
-      <TouchableOpacity style={btnStyle} onPress={this.onPreviousStep} disabled={this.props.previousBtnDisabled}>
-        <Text style={textStyle}>{this.props.activeStep === 0 ? '' : this.props.previousBtnText}</Text>
-      </TouchableOpacity>
-    );
+    const previousBtnText = this.props.activeStep === 0 ? '' : this.props.previousBtnText;
+
+    return previousBtnText && <TouchableOpacity style={btnStyle} onPress={this.onPreviousStep} disabled={this.props.previousBtnDisabled}>
+      <Text style={textStyle}>{previousBtnText}</Text>
+    </TouchableOpacity> ;
   };
 
   render() {
@@ -91,20 +91,20 @@ class ProgressStep extends Component {
     const viewProps = this.props.viewProps || {};
     const isScrollable = this.props.scrollable;
     const buttonRow = this.props.removeBtnRow ? null : (
-      <ProgressButtons 
-        renderNextButton={this.renderNextButton} 
-        renderPreviousButton={this.renderPreviousButton} 
-      />
+        <ProgressButtons
+            renderNextButton={this.renderNextButton}
+            renderPreviousButton={this.renderPreviousButton}
+        />
     );
 
     return (
-      <View style={{ flex: 1 }}>
-        {isScrollable
-          ? <ScrollView {...scrollViewProps}>{this.props.children}</ScrollView>
-          : <View {...viewProps}>{this.props.children}</View>}
+        <View style={{ flex: 1 }}>
+          {isScrollable
+              ? <ScrollView {...scrollViewProps}>{this.props.children}</ScrollView>
+              : <View {...viewProps}>{this.props.children}</View>}
 
-        {buttonRow}
-      </View>
+          {buttonRow}
+        </View>
     );
   }
 }
