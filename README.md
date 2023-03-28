@@ -178,6 +178,7 @@ render() {
 | btnContainer | Used to add styles around buttons                                                     | false | Object  |
 | previousBtnContainer | Used to add styles around previous button                                             | false | Object  |
 | nextBtnContainer | Used to add styles around next button                                                 | false | Object  |
+| stickeyBtns | If set buttons will always be sticked to bottom of the screen else end of the page     | false | Boolean  |
 
 ## Contributing
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
